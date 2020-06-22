@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
@@ -10,6 +11,12 @@ import { NopagefoundComponent } from '../shared/nopagefound/nopagefound.componen
 import { SidebarComponent } from '../shared/sidebar/sidebar.component';
 import { BreadcrumbsComponent } from '../shared/breadcrumbs/breadcrumbs.component';
 
+// Componentes externos
+import { ControladorComponent } from '../components/controlador/controlador.component';
+import { GraficaDonutsComponent } from '../components/grafica-donuts/grafica-donuts.component';
+
+// ng2- Charts
+import { ChartsModule } from 'ng2-charts';
 
 // Rutas de páginas (pages.routes.ts)
 import { PAGES_ROUTES } from './pages.routes';
@@ -24,15 +31,19 @@ import { PAGES_ROUTES } from './pages.routes';
         PagesComponent,
         DashboardComponent,
         ProgressComponent,
-        Graficas1Component
+        Graficas1Component,
+        ControladorComponent,
+        GraficaDonutsComponent
     ],
     exports: [
         DashboardComponent,
         ProgressComponent,
-        Graficas1Component
+        Graficas1Component,
     ],
     imports: [
-        PAGES_ROUTES
+        PAGES_ROUTES,
+        FormsModule,
+        ChartsModule
     ]
 })
 

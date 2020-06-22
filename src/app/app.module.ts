@@ -6,11 +6,13 @@ import { APP_ROUTES } from './app.routes';
 
 // Módulos
 import { PagesModule } from './pages/pages.module';
+import { FormsModule } from '@angular/forms';
 
 // Componentes
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './login/signup.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { SignupComponent } from './login/signup.component';
   imports: [
     BrowserModule,
     APP_ROUTES,
-    PagesModule
+    PagesModule,
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
