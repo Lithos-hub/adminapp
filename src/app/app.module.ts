@@ -1,18 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { SharedModule } from './shared/shared.module';
+import { CommonModule } from '@angular/common';
 
-// Rutas
+// Rutas - Rutes
 import { APP_ROUTES } from './app.routes';
 
-// Módulos
+// Módulos - Modules
 import { PagesModule } from './pages/pages.module';
 import { FormsModule } from '@angular/forms';
 
-// Componentes
+// Componentes - Components
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './login/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// Servicios - Services
+import { ServiceModule } from './services/service.module';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -22,11 +27,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SignupComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     APP_ROUTES,
     PagesModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    SharedModule,
+    ServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,6 +10,7 @@ import { HeaderComponent } from '../shared/header/header.component';
 import { NopagefoundComponent } from '../shared/nopagefound/nopagefound.component';
 import { SidebarComponent } from '../shared/sidebar/sidebar.component';
 import { BreadcrumbsComponent } from '../shared/breadcrumbs/breadcrumbs.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 // Componentes externos
 import { ControladorComponent } from '../components/controlador/controlador.component';
@@ -33,7 +34,8 @@ import { PAGES_ROUTES } from './pages.routes';
         ProgressComponent,
         Graficas1Component,
         ControladorComponent,
-        GraficaDonutsComponent
+        GraficaDonutsComponent,
+        AccountSettingsComponent
     ],
     exports: [
         DashboardComponent,
